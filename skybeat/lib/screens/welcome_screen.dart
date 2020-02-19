@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_animations/simple_animations.dart';
-import 'package:skybeat/screens/music_home.dart';
+import 'package:skybeat/screens/bottom_nav_bar.dart';
 
 class WelcomeScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
@@ -68,7 +69,7 @@ class WelcomeScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => MusicHome(),
+                                builder: (context) => BottomBarScreenController(),
                               ),
                             );
                           },
@@ -101,7 +102,7 @@ class WelcomeScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => MusicHome(),
+                                builder: (context) => BottomBarScreenController(),
                               ),
                             );
                           },

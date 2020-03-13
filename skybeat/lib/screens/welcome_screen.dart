@@ -9,11 +9,9 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
       Track("color1").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFF0A0D33), end: Color(0xFFDF0F90))),
+          ColorTween(begin: Color(0xFF0A0D33), end: Color(0xFF580038))),
       Track("color2").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFFDF0F90), end: Colors.blue.shade500)),
-      Track("color3").add(Duration(seconds: 3),
-          ColorTween(begin: Colors.blue.shade500, end: Color(0xFF0A0D33))),
+          ColorTween(begin: Color(0xFF580038), end: Color(0xFF0A0D33))) ,
     ]);
 
     return Scaffold(
@@ -28,7 +26,6 @@ class WelcomeScreen extends StatelessWidget {
                 colors: [
                   animation["color1"],
                   animation["color2"],
-                  animation["color3"]
                 ],
                 begin: Alignment.bottomLeft,
                 end: Alignment.topRight,

@@ -25,16 +25,14 @@ class _BottomBarScreenControllerState extends State<BottomBarScreenController> {
   int _selectedIndex = 0;
 
   Widget _bottomNavigationBar(int selectedIndex) => BottomNavigationBar(
+        backgroundColor: Colors.black,
         onTap: (int index) => setState(() => _selectedIndex = index),
         currentIndex: selectedIndex,
         items: [
           BottomNavigationBarItem(
             activeIcon: Icon(Icons.play_arrow),
             icon: Icon(Icons.graphic_eq),
-            title: Text(
-              "",
-              style: TextStyle(fontSize: 0.0),
-            ),
+            title: Text("Music"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),

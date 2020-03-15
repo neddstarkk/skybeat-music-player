@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9ec8c4-3a3e-4382-80aa-f49bcb4ff385" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/skybeat/lib/widgets/profile_page_presenter.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybeat/lib/widgets/library_profile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/bottom_nav_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/bottom_nav_bar.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/widgets/profile_page_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/widgets/profile_page_presenter.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +16,9 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="skybeat-music-player" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

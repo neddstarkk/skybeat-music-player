@@ -13,9 +13,9 @@ class ProfilePagePresenter extends StatelessWidget {
 
     final tween = MultiTrackTween([
       Track("color1").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFF0A0D33), end: Color(0xFF580038))),
+          ColorTween(begin: Color(0xFF170C45), end: Color(0xFF580038))),
       Track("color2").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFF0A0D33), end: Color(0xFF0A0D33))),
+          ColorTween(begin: Color(0xFF24093C), end: Color(0xFF170C45))),
     ]);
 
     return ControlledAnimation(
@@ -76,18 +76,15 @@ class ProfilePagePresenter extends StatelessWidget {
                       )
                     ],
                   ),
-                  DefaultTabController(
-                    length: 4,
-                    child: TabBar(
-                      indicatorColor: Colors.pinkAccent,
-                      indicatorSize: TabBarIndicatorSize.label,
-                      tabs: <Widget>[
-                        Tab(text: "Library",),
-                        Tab(text: "Artist",),
-                        Tab(text: "Download",),
-                        Tab(text: "History",),
-                      ],
-                    )
+                  TabBar(
+                    indicatorColor: Colors.pinkAccent,
+                    indicatorSize: TabBarIndicatorSize.label,
+                    tabs: <Widget>[
+                      Tab(text: "Library"),
+                      Tab(text: "Artist"),
+                      Tab(text: "Download"),
+                      Tab(text: "History"),
+                    ],
                   ),
                 ],
               ),

@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:skybeat/screens/explore_page.dart';
-import 'package:skybeat/screens/music_home.dart';
-import 'package:skybeat/screens/profile_page.dart';
+import 'package:skybeat/screens/explore_page/explore_page.dart';
+import 'package:skybeat/screens/music_home/music_home.dart';
+import 'package:skybeat/screens/profile_page/profile_page.dart';
 
 class BottomBarScreenController extends StatefulWidget {
   @override
   _BottomBarScreenControllerState createState() =>
       _BottomBarScreenControllerState();
 }
+
+
 
 class _BottomBarScreenControllerState extends State<BottomBarScreenController> {
   final List<Widget> pages = [

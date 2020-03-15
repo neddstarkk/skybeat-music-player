@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:skybeat/screens/bottom_nav_bar.dart';
+import 'package:skybeat/screens/welcome_screen/widgets/animated_text.dart';
 
 class WelcomeScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
       Track("color1").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFF0A0D33), end: Color(0xFF580038))),
+          ColorTween(begin: Color(0xFF2E2870), end: Color(0xFF3072AC))),
       Track("color2").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFF580038), end: Color(0xFF0A0D33))) ,
+          ColorTween(begin: Color(0xFF3072AC), end: Color(0xFFC23061))),
+      Track("color3").add(Duration(seconds: 3),
+          ColorTween(begin: Color(0xFFC23061), end: Color(0xFF2E2870))),
     ]);
 
     return Scaffold(
@@ -22,14 +24,11 @@ class WelcomeScreen extends StatelessWidget {
         builder: (context, animation) {
           return Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  animation["color1"],
-                  animation["color2"],
-                ],
-                begin: Alignment.bottomLeft,
-                end: Alignment.topRight,
-              ),
+              gradient: LinearGradient(colors: [
+                animation["color1"],
+                animation["color2"],
+                animation["color3"],
+              ], begin: Alignment.topRight, end: Alignment.bottomRight),
             ),
             child: SafeArea(
               child: Column(
@@ -38,14 +37,18 @@ class WelcomeScreen extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(top: 75.0),
-                    child: Text(
-                      'TUNE IN         \nTOGETHER',
-                      style: TextStyle(
-//                  fontFamily: 'Teko',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 70.0,
-                      ),
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          'TUNE IN         ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 70.0,
+                          ),
+                        ),
+                        AnimatedText(text: "TOGETHER",),
+                      ],
                     ),
                   ),
                   SizedBox(
@@ -66,7 +69,8 @@ class WelcomeScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => BottomBarScreenController(),
+                                builder: (context) =>
+                                    BottomBarScreenController(),
                               ),
                             );
                           },
@@ -99,7 +103,8 @@ class WelcomeScreen extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => BottomBarScreenController(),
+                                builder: (context) =>
+                                    BottomBarScreenController(),
                               ),
                             );
                           },

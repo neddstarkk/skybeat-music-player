@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9ec8c4-3a3e-4382-80aa-f49bcb4ff385" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/skybeat/lib/widgets/library_profile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/playlist_creator.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen/widgets/animated_text.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/widgets/profile_page_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/widgets/profile_page_presenter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/bottom_nav_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/bottom_nav_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/explore_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/music_home.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/widgets/library_profile.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/widgets/profile_page_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/profile_page_presenter.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +50,7 @@
   </component>
   <component name="ProjectId" id="1Z4P9b7x35hFOEvK4Lmhqr9S9eL" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
@@ -51,6 +58,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets" />
+      <recent name="$PROJECT_DIR$/skybeat/lib/screens/profile_page" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

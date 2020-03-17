@@ -28,22 +28,28 @@ class ProfilePagePresenter extends StatelessWidget {
           height: 227.0,
           child: Column(
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  FlatButton(
-                    onPressed: () {
-                      print("Notifications icon pressed");
-                    },
-                    child: Icon(Icons.notifications_none, color: Color(0xFFCFCAD1),),
-                  ),
-                  FlatButton(
-                    onPressed: () {
-                      print("Settings button pressed");
-                    },
-                    child: Icon(Icons.settings, color: Color(0xFFCFCAD1),),
-                  ),
-                ],
+              SizedBox(height: 5.0,),
+              Padding(
+                padding: EdgeInsets.only(top: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: () {
+                        print("Notifications icon pressed");
+                      },
+                      child: Icon(Icons.notifications_none, color: Color(0xFFCFCAD1),),
+                    ),
+                    SizedBox(width: 30.0,),
+                    GestureDetector(
+                      onTap: () {
+                        print("Settings button pressed");
+                      },
+                      child: Icon(Icons.settings, color: Color(0xFFCFCAD1),),
+                    ),
+                    SizedBox(width: 15.0,)
+                  ],
+                ),
               ),
               Column(
 //                mainAxisSize: MainAxisSize.min,

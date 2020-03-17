@@ -9,8 +9,6 @@ class BottomBarScreenController extends StatefulWidget {
       _BottomBarScreenControllerState();
 }
 
-
-
 class _BottomBarScreenControllerState extends State<BottomBarScreenController> {
   final List<Widget> pages = [
     MusicHome(

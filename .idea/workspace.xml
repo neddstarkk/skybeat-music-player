@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac9ec8c4-3a3e-4382-80aa-f49bcb4ff385" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/artist_tab.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/library_tab.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/profile_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/playlist_creator.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/playlist_creator.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/bottom_nav_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/bottom_nav_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/artist_tab.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/artist_tab.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/profile_page_presenter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/profile_page/widgets/profile_page_presenter.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

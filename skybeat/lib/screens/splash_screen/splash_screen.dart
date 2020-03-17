@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:skybeat/screens/welcome_screen.dart';
+import 'package:skybeat/screens/welcome_screen/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

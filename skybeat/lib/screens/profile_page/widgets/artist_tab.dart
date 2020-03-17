@@ -60,7 +60,7 @@ class ArtistTab extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30.0),
-          color: Color(0xFF232027),
+          color: Color(0xFF1B181F),
         ),
         child: ListView.builder(
           itemCount: _artists.length,

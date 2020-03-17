@@ -110,13 +110,15 @@ class PlaylistCreator extends StatelessWidget {
                           textAlign: TextAlign.right,
                           style: TextStyle(
                             color: Color(0xFFCFCAD1),
+                            fontSize: 18.0
                           ),
                         ),
+                        SizedBox(height: 10.0,),
                         Text(
                           "0 songs",
                           textAlign: TextAlign.right,
                           style: TextStyle(
-                            color: Color(0xFFCFCAD1),
+                            color: Color(0xFF6D6977),
                           ),
                         ),
                       ],

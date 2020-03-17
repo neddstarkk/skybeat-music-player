@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ac9ec8c4-3a3e-4382-80aa-f49bcb4ff385" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/splash_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen/welcome_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen/welcome_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen/widgets/animated_text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/skybeat/lib/screens/welcome_screen/widgets/animated_text.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -36,7 +36,7 @@ class _AnimatedTextState extends State<AnimatedText>
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
-      duration: Duration(seconds: 3),
+      duration: Duration(seconds: 1),
       opacity: opacity,
       child: Text(
         "$text   ",

@@ -15,10 +15,11 @@ class LibraryTab extends StatelessWidget {
             height: 10.0,
           ),
           Container(
-            height: MediaQuery.of(context).size.height-533,
+            height: MediaQuery.of(context).size.height - 533,
             decoration: BoxDecoration(
-                color: Color(0xFF1B181F),
-                borderRadius: BorderRadius.circular(20.0)),
+              color: Color(0xFF1B181F),
+                borderRadius: BorderRadius.only(topRight: Radius.circular(20.0), topLeft: Radius.circular(20.0),),
+            ),
             child: Column(
               children: <Widget>[
                 SizedBox(
@@ -32,10 +33,8 @@ class LibraryTab extends StatelessWidget {
                     ),
                     Text(
                       "Favourites",
-                      style: TextStyle(
-                          fontSize: 20.0,
-                          color: Color(0xFFCFCAD1)
-                      ),
+                      style:
+                          TextStyle(fontSize: 20.0, color: Color(0xFFCFCAD1)),
                     )
                   ],
                 ),
@@ -45,10 +44,7 @@ class LibraryTab extends StatelessWidget {
                 Text(
                   "Playlists you create will appear\n here",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Color(0xFF6D6977),
-                      fontSize: 16.0
-                  ),
+                  style: TextStyle(color: Color(0xFF6D6977), fontSize: 16.0),
                 )
               ],
             ),

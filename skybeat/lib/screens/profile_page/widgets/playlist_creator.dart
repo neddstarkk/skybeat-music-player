@@ -7,7 +7,9 @@ class PlaylistCreator extends StatelessWidget {
       height: 200.0,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25.0),
+        borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(20.0),
+            bottomLeft: Radius.circular(20.0)),
         color: Color(0xFF1B181F),
       ),
       child: Row(
@@ -109,11 +111,11 @@ class PlaylistCreator extends StatelessWidget {
                           "Favorite songs",
                           textAlign: TextAlign.right,
                           style: TextStyle(
-                            color: Color(0xFFCFCAD1),
-                            fontSize: 18.0
-                          ),
+                              color: Color(0xFFCFCAD1), fontSize: 18.0),
                         ),
-                        SizedBox(height: 10.0,),
+                        SizedBox(
+                          height: 10.0,
+                        ),
                         Text(
                           "0 songs",
                           textAlign: TextAlign.right,

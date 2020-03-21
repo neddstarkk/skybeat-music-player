@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skybeat/screens/profile_page/widgets/artist_tab.dart';
 import 'package:skybeat/screens/profile_page/widgets/download_tab.dart';
+import 'package:skybeat/screens/profile_page/widgets/history_tab.dart';
 import 'package:skybeat/screens/profile_page/widgets/library_tab.dart';
 import 'package:skybeat/screens/profile_page/widgets/profile_page_presenter.dart';
 
@@ -30,7 +31,7 @@ class ProfilePage extends StatelessWidget {
                     LibraryTab(),
                     ArtistTab(),
                     DownloadTab(),
-                    Center(child: Text('4')),
+                    HistoryTab(),
                   ],
                 ),
               ),

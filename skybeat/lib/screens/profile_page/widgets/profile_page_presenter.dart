@@ -13,9 +13,9 @@ class ProfilePagePresenter extends StatelessWidget {
 
     final tween = MultiTrackTween([
       Track("color1").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFF0A0D33), end: Color(0xFF580038))),
+          ColorTween(begin: Color(0xFF170C45), end: Color(0xFF580038))),
       Track("color2").add(Duration(seconds: 3),
-          ColorTween(begin: Color(0xFF0A0D33), end: Color(0xFF0A0D33))),
+          ColorTween(begin: Color(0xFF24093C), end: Color(0xFF170C45))),
     ]);
 
     return ControlledAnimation(
@@ -28,14 +28,28 @@ class ProfilePagePresenter extends StatelessWidget {
           height: 227.0,
           child: Column(
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  FlatButton(
-                    onPressed: () {},
-                    child: Icon(Icons.notifications),
-                  )
-                ],
+              SizedBox(height: 5.0,),
+              Padding(
+                padding: EdgeInsets.only(top: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: () {
+                        print("Notifications icon pressed");
+                      },
+                      child: Icon(Icons.notifications_none, color: Color(0xFFCFCAD1),),
+                    ),
+                    SizedBox(width: 30.0,),
+                    GestureDetector(
+                      onTap: () {
+                        print("Settings button pressed");
+                      },
+                      child: Icon(Icons.settings, color: Color(0xFFCFCAD1),),
+                    ),
+                    SizedBox(width: 15.0,)
+                  ],
+                ),
               ),
               Column(
 //                mainAxisSize: MainAxisSize.min,
@@ -62,13 +76,14 @@ class ProfilePagePresenter extends StatelessWidget {
                         "    $title",
                         style: TextStyle(
                             fontSize: 30.0,
+                            color: Color(0xFFCFCAD1),
                             fontWeight: FontWeight.bold,
                             fontFamily: "Teko"),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 13.0),
                         child: GestureDetector(
-                          child: Icon(Icons.arrow_forward_ios),
+                          child: Icon(Icons.arrow_forward_ios, color: Color(0xFFCFCAD1),),
                           onTap: () {
                             print("Arrow pressed");
                           },
@@ -76,18 +91,17 @@ class ProfilePagePresenter extends StatelessWidget {
                       )
                     ],
                   ),
-                  DefaultTabController(
-                    length: 4,
-                    child: TabBar(
-                      indicatorColor: Colors.pinkAccent,
-                      indicatorSize: TabBarIndicatorSize.label,
-                      tabs: <Widget>[
-                        Tab(text: "Library",),
-                        Tab(text: "Artist",),
-                        Tab(text: "Download",),
-                        Tab(text: "History",),
-                      ],
-                    )
+                  TabBar(
+                    indicatorColor: Colors.pinkAccent,
+                    indicatorSize: TabBarIndicatorSize.label,
+                    labelColor: Color(0xFFCFCAD1),
+                    unselectedLabelColor: Color(0xFF6D6977),
+                    tabs: <Widget>[
+                      Tab(text: "Library", ),
+                      Tab(text: "Artist"),
+                      Tab(text: "Download"),
+                      Tab(text: "History"),
+                    ],
                   ),
                 ],
               ),

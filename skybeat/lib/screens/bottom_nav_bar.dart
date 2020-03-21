@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:skybeat/screens/explore_page.dart';
-import 'package:skybeat/screens/music_home.dart';
-import 'package:skybeat/screens/profile_page.dart';
+import 'package:skybeat/screens/explore_page/explore_page.dart';
+import 'package:skybeat/screens/music_home/music_home.dart';
+import 'package:skybeat/screens/profile_page/profile_page.dart';
 
 class BottomBarScreenController extends StatefulWidget {
   @override

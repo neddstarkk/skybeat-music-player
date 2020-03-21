@@ -42,7 +42,6 @@ class WelcomeScreen extends StatelessWidget {
                         Text(
                           'TUNE IN         ',
                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
                             color: Colors.white,
                             fontSize: 70.0,
                           ),

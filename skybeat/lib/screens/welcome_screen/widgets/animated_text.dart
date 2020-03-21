@@ -36,6 +36,7 @@ class _AnimatedTextState extends State<AnimatedText>
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
+
       duration: Duration(milliseconds: 1000),
       opacity: opacity,
       child: Text(

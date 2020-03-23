@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:simple_animations/simple_animations/multi_track_tween.dart';
 
@@ -22,6 +23,7 @@ class ExplorePage extends StatelessWidget {
 
     return Scaffold(
       body: Stack(
+        overflow: Overflow.clip,
         alignment: Alignment.center,
         children: <Widget>[
           ControlledAnimation(
@@ -40,30 +42,47 @@ class ExplorePage extends StatelessWidget {
                       ),
                     ),
                   )),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(height: MediaQuery.of(context).padding.top + 30),
-              Container(
-                height: 40.0,
-                width: MediaQuery.of(context).size.width - 70,
-                decoration: BoxDecoration(
-                  color: Colors.transparent.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(30.0),
+          SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(height: MediaQuery.of(context).padding.top + 30),
+                Container(
+                  height: 40.0,
+                  width: MediaQuery.of(context).size.width - 70,
+                  decoration: BoxDecoration(
+                    color: Colors.transparent.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      SizedBox(
+                        width: 20.0,
+                      ),
+                      Icon(
+                        Icons.search,
+                        color: Color(0xFF707EA8),
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        "Search",
+                        style: TextStyle(color: Color(0xFF707EA8)),
+                      )
+                    ],
+                  ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Icon(Icons.search, color: Color(0xFF707EA8),),
-                    SizedBox(width: 10.0,),
-                    Text("Search", style: TextStyle(color: Color(0xFF707EA8)),)
-                  ],
-                ),
-              ),
-            ],
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),

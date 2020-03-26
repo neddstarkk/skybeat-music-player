@@ -41,9 +41,6 @@ class GenreSelector extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        SizedBox(
-          width: 20.0,
-        ),
         Expanded(
           flex: 1,
           child: SizedBox(
@@ -53,7 +50,7 @@ class GenreSelector extends StatelessWidget {
               itemCount: _genres.length,
               itemBuilder: (context, index) => Container(
                 width: 150.0,
-                margin: EdgeInsets.symmetric(horizontal: 8.0),
+                margin: EdgeInsets.only(left: 20.0),
                 decoration: BoxDecoration(
                   color: _genres[index].color,
                   borderRadius: BorderRadius.circular(20.0),
@@ -67,9 +64,15 @@ class GenreSelector extends StatelessWidget {
                     Row(
                       children: <Widget>[
                         SizedBox(
-                          width: 20.0,
+                          width: 10.0,
                         ),
-                        Text("${_genres[index].genreName}"),
+                        Text(
+                          "${_genres[index].genreName}",
+                          style: TextStyle(
+                              color: Color(0xFFCFCAD1),
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                     Spacer(),

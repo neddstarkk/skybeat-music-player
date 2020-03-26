@@ -4,6 +4,7 @@ import 'package:simple_animations/simple_animations.dart';
 import 'package:simple_animations/simple_animations/multi_track_tween.dart';
 import 'package:skybeat/screens/explore_page/widgets/genre_selector.dart';
 import 'package:skybeat/screens/explore_page/widgets/searchbar.dart';
+import 'package:skybeat/screens/explore_page/widgets/skybeat_charts.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({Key key}) : super(key: key);
@@ -49,8 +50,33 @@ class ExplorePage extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: MediaQuery.of(context).padding.top + 30),
               SearchBar(),
-              SizedBox(height: 25.0,),
+              SizedBox(
+                height: 25.0,
+              ),
               GenreSelector(),
+              SizedBox(
+                height: 40.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  SizedBox(
+                    width: 20.0,
+                  ),
+                  Text(
+                    "Skybeat Charts",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25.0,
+                      color: Color(0xFFCDCED3),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 25.0,
+              ),
+              SkybeatCharts(),
             ],
           ),
         ],

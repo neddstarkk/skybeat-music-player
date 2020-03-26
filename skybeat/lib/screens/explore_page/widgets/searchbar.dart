@@ -5,7 +5,7 @@ class SearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40.0,
-      width: MediaQuery.of(context).size.width - 70,
+      width: MediaQuery.of(context).size.width - 50,
       child: TextField(
         decoration: InputDecoration(
           hintText: "Search",

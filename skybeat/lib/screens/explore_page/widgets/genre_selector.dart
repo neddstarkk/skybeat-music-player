@@ -16,6 +16,24 @@ class GenreSelector extends StatelessWidget {
       image:
           "https://www.ecopetit.cat/wpic/mpic/315-3155081_aesthetic-rose.jpg",
     ),
+    Genre(
+      color: Color(0xFF4B8ABD),
+      genreName: "Bollywood",
+      image:
+          "https://i.pinimg.com/originals/ed/f1/2a/edf12a77a3a6559fa706176068cdc22f.jpg",
+    ),
+    Genre(
+      color: Color(0xFFC5554A),
+      genreName: "Calm",
+      image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuFBO-sRThN6gHmKbhNbm__kLCLzLw0gLHWYBxdnckw5ROmM_P",
+    ),
+    Genre(
+      color: Color(0xFF4BBD5D),
+      genreName: "Travel",
+      image:
+          "https://66.media.tumblr.com/85428b4500861e04eb742454479c399c/tumblr_pcfucy5Kza1xy4ozho1_400.jpg",
+    ),
   ];
 
   @override
@@ -32,7 +50,7 @@ class GenreSelector extends StatelessWidget {
             height: 150.0,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 1,
+              itemCount: _genres.length,
               itemBuilder: (context, index) => Container(
                 width: 150.0,
                 margin: EdgeInsets.symmetric(horizontal: 8.0),
@@ -58,8 +76,8 @@ class GenreSelector extends StatelessWidget {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: Container(
-                        height: 85.0,
-                        width: 80.0,
+                        height: 90.0,
+                        width: 90.0,
                         decoration: BoxDecoration(
                           color: Colors.transparent,
                           borderRadius: BorderRadius.only(
@@ -68,9 +86,8 @@ class GenreSelector extends StatelessWidget {
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(150.0),
-                            bottomRight: Radius.circular(15.0)
-                          ),
+                              topLeft: Radius.circular(150.0),
+                              bottomRight: Radius.circular(15.0)),
                           child: Image.network(
                             _genres[index].image,
                             fit: BoxFit.fill,

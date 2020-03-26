@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:simple_animations/simple_animations/multi_track_tween.dart';
+import 'package:skybeat/screens/explore_page/widgets/genre_selector.dart';
 import 'package:skybeat/screens/explore_page/widgets/searchbar.dart';
 
 class ExplorePage extends StatelessWidget {
@@ -48,7 +49,8 @@ class ExplorePage extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: MediaQuery.of(context).padding.top + 30),
               SearchBar(),
-              
+              SizedBox(height: 25.0,),
+              GenreSelector(),
             ],
           ),
         ],

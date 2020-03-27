@@ -12,16 +12,10 @@ class ExplorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tween = MultiTrackTween([
-      Track("color1").add(
-          Duration(seconds: 3),
-          ColorTween(
-              begin: Color(0xFF173179).withOpacity(1),
-              end: Color(0xFF68377E).withOpacity(1))),
-      Track("color2").add(
-          Duration(seconds: 3),
-          ColorTween(
-              begin: Color(0xFF68377E).withOpacity(1),
-              end: Color(0xFF173179).withOpacity(1))),
+      Track("color1").add(Duration(seconds: 3),
+          ColorTween(begin: Color(0xFF170C45), end: Color(0xFF580038))),
+      Track("color2").add(Duration(seconds: 3),
+          ColorTween(begin: Color(0xFF24093C), end: Color(0xFF170C45))),
     ]);
 
     return Scaffold(

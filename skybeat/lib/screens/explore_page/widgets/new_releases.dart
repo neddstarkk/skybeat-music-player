@@ -79,8 +79,30 @@ class NewReleases extends StatelessWidget {
                     height: 130,
                     width: 130,
                     decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(10.0)),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          child: Image.network(
+                            "https://rukminim1.flixcart.com/image/832/832/jnm2efk0/music/t/e/h/audio-cd-cap-standard-edition-ek-main-aur-ekk-tu-original-imafa8cyr8krvhgf.jpeg?q=70",
+                            fit: BoxFit.cover,
+                          ),
+                          height: 130,
+                          width: 130,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0)),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(
+                            Icons.play_arrow,
+                            size: 30.0,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 25.0,
@@ -90,12 +112,19 @@ class NewReleases extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("Drama Na De"),
                       Container(
                         width: 130,
                         child: RichText(
-                          text: TextSpan(
-                              text: "Girish Nakod, Muhfaad, Ankita Thakur"),
+                          text: TextSpan(text: "Ekk Main Aur Ekk Tuu"),
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: true,
+                        ),
+                      ),
+                      Container(
+                        width: 130,
+                        child: RichText(
+                          text:
+                              TextSpan(text: "Benny Dayal, Anushka Manchanda"),
                           overflow: TextOverflow.ellipsis,
                           softWrap: true,
                         ),
@@ -110,8 +139,28 @@ class NewReleases extends StatelessWidget {
                     height: 160,
                     width: 160,
                     decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(10.0)),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        Container(
+                          child: Image.network(
+                            "https://is4-ssl.mzstatic.com/image/thumb/Music124/v4/b2/4b/c1/b24bc118-1993-1ee3-68d6-bf5f8e665ced/source/1200x1200bb.jpg",
+                            fit: BoxFit.cover,
+                          ),
+                          height: 160,
+                          width: 160,
+                        ),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(
+                            Icons.play_arrow,
+                            size: 30.0,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 15.0,
@@ -140,8 +189,23 @@ class NewReleases extends StatelessWidget {
                     height: 130,
                     width: 130,
                     decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(10.0)),
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Stack(
+                      children: <Widget>[
+                        Image.network(
+                          "https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Worth_it_single_cover.png/220px-Worth_it_single_cover.png",
+                          fit: BoxFit.cover,
+                        ),
+                        Align(
+                            alignment: Alignment.bottomRight,
+                            child: Icon(
+                              Icons.play_arrow,
+                              size: 30.0,
+                            ))
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 25.0,

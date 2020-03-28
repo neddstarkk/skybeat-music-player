@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:simple_animations/simple_animations/multi_track_tween.dart';
 import 'package:skybeat/screens/explore_page/widgets/genre_selector.dart';
+import 'package:skybeat/screens/explore_page/widgets/new_releases.dart';
 import 'package:skybeat/screens/explore_page/widgets/playlists.dart';
 import 'package:skybeat/screens/explore_page/widgets/searchbar.dart';
 import 'package:skybeat/screens/explore_page/widgets/skybeat_charts.dart';
@@ -41,6 +42,7 @@ class ExplorePage extends StatelessWidget {
                     ),
                   )),
           SingleChildScrollView(
+            physics: BouncingScrollPhysics() ,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -96,6 +98,7 @@ class ExplorePage extends StatelessWidget {
                   height: 25.0,
                 ),
                 Playlists(),
+                NewReleases(),
               ],
             ),
           ),

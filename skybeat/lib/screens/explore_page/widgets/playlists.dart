@@ -40,60 +40,61 @@ class Playlists extends StatelessWidget {
         height: (MediaQuery.of(context).size.height - 400),
         width: MediaQuery.of(context).size.width,
         child: GridView.builder(
-            physics: NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: _playlists.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              mainAxisSpacing: 15.0,
-              crossAxisCount: 2,
-            ),
-            itemBuilder: (context, index) => Column(
-                  children: <Widget>[
-                    Container(
-                      height: 200,
-                      width: 200,
-                      margin: EdgeInsets.only(
-                        left: 10.0,
-                      ),
-                      decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(20.0)),
-                      child: Image.network(
-                        "${_playlists[index].image}",
-                        fit: BoxFit.fill,
-                      ),
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: _playlists.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            mainAxisSpacing: 15.0,
+            crossAxisCount: 2,
+          ),
+          itemBuilder: (context, index) => Column(
+            children: <Widget>[
+              Container(
+                height: 200,
+                width: 200,
+                margin: EdgeInsets.only(
+                  left: 10.0,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Image.network(
+                  "${_playlists[index].image}",
+                  fit: BoxFit.fill,
+                ),
+              ),
+              SizedBox(
+                height: 2.5,
+              ),
+              Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: 27.0,
+                  ),
+                  Text(
+                    "${_playlists[index].playlistName}",
+                    style: TextStyle(
+                      color: Color(0xFFCFCAD1),
+                      fontSize: 15.0,
                     ),
-                    SizedBox(
-                      height: 2.5,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        SizedBox(
-                          width: 27.0,
-                        ),
-                        Text(
-                          "${_playlists[index].playlistName}",
-                          style: TextStyle(
-                            color: Color(0xFFCFCAD1),
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: <Widget>[
-                        SizedBox(
-                          width: 27,
-                        ),
-                        Text(
-                          "${_playlists[index].genre}",
-                          style: TextStyle(
-                              color: Color(0xFF6D69A7), fontSize: 15.0),
-                        ),
-                      ],
-                    ),
-                  ],
-                )),
+                  ),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: 27,
+                  ),
+                  Text(
+                    "${_playlists[index].genre}",
+                    style: TextStyle(color: Color(0xFF6D69A7), fontSize: 15.0),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -3,16 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:skybeat/screens/profile_page/widgets/settings_option.dart';
 import 'package:skybeat/screens/profile_page/widgets/settings_toggle_button.dart';
 
-class Settings extends StatefulWidget {
-  @override
-  _SettingsState createState() => _SettingsState();
-}
-
-class _SettingsState extends State<Settings> {
-  bool streamCellular = false;
-  bool downloadCellular = false;
-  bool dataSaver = false;
-
+class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,18 +56,21 @@ class _SettingsState extends State<Settings> {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: 20.0,
+                  height: 30.0,
                 ),
-                SettingsOption(optionName: "Stream Using Cellular", widget: SettingsToggleButton(),),
+                SettingsOption(
+                  optionName: "Stream Using Cellular",
+                  widget: SettingsToggleButton(),
+                ),
                 SizedBox(
-                  height: 10.0,
+                  height: 30.0,
                 ),
                 SettingsOption(
                   optionName: "Download Using Cellular",
                   widget: SettingsToggleButton(),
                 ),
                 SizedBox(
-                  height: 10.0,
+                  height: 30.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -116,7 +110,7 @@ class _SettingsState extends State<Settings> {
                   ],
                 ),
                 SizedBox(
-                  height: 20.0,
+                  height: 30.0,
                 ),
               ],
             ),
@@ -124,7 +118,159 @@ class _SettingsState extends State<Settings> {
           SizedBox(
             height: 15.0,
           ),
-          Container()
+          Container(
+            decoration: BoxDecoration(
+                color: Color(0xFF201E24).withOpacity(0.9),
+                borderRadius: BorderRadius.circular(15.0)),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 30.0,
+                ),
+                SettingsOption(
+                  optionName: "Preferred Storage Location",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("Preffered Storage Location button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                SettingsOption(
+                  optionName: "Privacy Settings",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("Privacy Settings button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Color(0xFF201E24).withOpacity(0.9),
+              borderRadius: BorderRadius.circular(20.0),
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 30,),
+                SettingsOption(
+                  optionName: "Lock Screen Mode",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("Lock Screen Button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30,),
+                SettingsOption(
+                  optionName: "Choose Default Audio Quality",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("Audio Quality Button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30,),
+                SettingsOption(
+                  optionName: "Help",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("Help Button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30,),
+                SettingsOption(
+                  optionName: "Clear Cache",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("Clear Cache Button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30,),
+                SettingsOption(
+                  optionName: "Community Guidelines",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("Guidelines Button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30,),
+                SettingsOption(
+                  optionName: "About",
+                  widget: GestureDetector(
+                    onTap: () {
+                      print("About Button pressed");
+                    },
+                    child: Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xFF403D44),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30,),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Container(
+            height: 50,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20.0)
+            ),
+            child: FlatButton(
+              color: Color(0xFF201E24).withOpacity(0.9),
+              onPressed: () {
+                print("Log Out pressed");
+              },
+              child: Text("Log Out", style: TextStyle(
+                color: Color(0xFFCFCAD1),
+              ),),
+            ),
+          ),
         ],
       ),
     );

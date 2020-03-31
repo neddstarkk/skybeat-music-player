@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:skybeat/screens/profile_page/widgets/settings_option.dart';
+import 'package:skybeat/screens/profile_page/widgets/settings_toggle_button.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -65,70 +67,13 @@ class _SettingsState extends State<Settings> {
                 SizedBox(
                   height: 20.0,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      "Stream Using Cellular",
-                      style:
-                          TextStyle(color: Color(0xFFD1CFD5), fontSize: 18.0),
-                    ),
-                    Spacer(),
-                    GestureDetector(
-                      onTap: () {
-                        streamCellular = !streamCellular;
-                      },
-                      child: CupertinoSwitch(
-                        activeColor: Color(0xFFF5016A),
-                        value: streamCellular,
-                        onChanged: (value) {
-                          setState(() {
-                            streamCellular = value;
-                          });
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                  ],
-                ),
+                SettingsOption(optionName: "Stream Using Cellular", widget: SettingsToggleButton(),),
                 SizedBox(
                   height: 10.0,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      "Download Using Cellular",
-                      style:
-                          TextStyle(color: Color(0xFFD1CFD5), fontSize: 18.0),
-                    ),
-                    Spacer(),
-                    GestureDetector(
-                      onTap: () {
-                        downloadCellular = !downloadCellular;
-                      },
-                      child: CupertinoSwitch(
-                        activeColor: Color(0xFFF5016A),
-                        value: downloadCellular,
-                        onChanged: (value) {
-                          setState(() {
-                            downloadCellular = value;
-                          });
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                  ],
+                SettingsOption(
+                  optionName: "Download Using Cellular",
+                  widget: SettingsToggleButton(),
                 ),
                 SizedBox(
                   height: 10.0,
@@ -164,20 +109,7 @@ class _SettingsState extends State<Settings> {
                       ],
                     ),
                     Spacer(),
-                    GestureDetector(
-                      onTap: () {
-                        dataSaver = !dataSaver;
-                      },
-                      child: CupertinoSwitch(
-                        activeColor: Color(0xFFF5016A),
-                        value: dataSaver,
-                        onChanged: (value) {
-                          setState(() {
-                            dataSaver = value;
-                          });
-                        },
-                      ),
-                    ),
+                    SettingsToggleButton(),
                     SizedBox(
                       width: 20.0,
                     ),

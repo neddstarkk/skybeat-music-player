@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:skybeat/screens/profile_page/notification_page.dart';
+
+import '../settings_page.dart';
 
 class ProfilePagePresenter extends StatelessWidget {
   final String title;
@@ -41,13 +44,13 @@ class ProfilePagePresenter extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
+                          CupertinoPageRoute(
                             builder: (context) => NotificationPage(),
                           ),
                         );
                       },
                       child: Icon(
-                        Icons.notifications_none,
+                        Icons.notifications,
                         color: Color(0xFFCFCAD1),
                       ),
                     ),
@@ -56,7 +59,12 @@ class ProfilePagePresenter extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        print("Settings button pressed");
+                        Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => Settings(),
+                          ),
+                        );
                       },
                       child: Icon(
                         Icons.settings,

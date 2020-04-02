@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class MusicHome extends StatefulWidget {
@@ -8,8 +10,6 @@ class MusicHome extends StatefulWidget {
 }
 
 class _MusicHomeState extends State<MusicHome> {
-
-  
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -32,7 +32,26 @@ class _MusicHomeState extends State<MusicHome> {
         ],
         leading: Icon(Icons.sort),
       ),
-      body: Stack(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/01/12/11/es-divide-final-artwork-lo-res.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(
+            sigmaX: MediaQuery.of(context).size.width,
+            sigmaY: MediaQuery.of(context).size.height,
+          ),
+          child: Container(
+            child: Center(
+              child: Text("This is some test text"),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

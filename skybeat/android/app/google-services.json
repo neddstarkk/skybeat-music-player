@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "325344076630",
+    "firebase_url": "https://skybeat-music-player.firebaseio.com",
+    "project_id": "skybeat-music-player",
+    "storage_bucket": "skybeat-music-player.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325344076630:android:b52c5496eda0975e95acf7",
+        "android_client_info": {
+          "package_name": "com.example.skybeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325344076630-3165ndhug2o0lji1s1sqgje21d126flt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.skybeat",
+            "certificate_hash": "823c368153731c7a259dac21328915b71bd94699"
+          }
+        },
+        {
+          "client_id": "325344076630-id9jc0huk7vgj0ava8dno4fn97444gku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkTK2tNNFDO_107dUlGPE_SxoGtAjvoZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325344076630-id9jc0huk7vgj0ava8dno4fn97444gku.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

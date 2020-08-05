@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_animations/simple_animations.dart';
+import 'package:skybeat/auth/sign_in.dart';
 import 'package:skybeat/screens/bottom_nav_bar.dart';
 import 'package:skybeat/screens/welcome_screen/widgets/animated_text.dart';
 
@@ -99,13 +100,13 @@ class WelcomeScreen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(30.0),
                           ),
                           onPressed: () {
-                            Navigator.push(
+                            signInWithGoogle().whenComplete(() => Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
                                     BottomBarScreenController(),
                               ),
-                            );
+                            ));
                           },
                           splashColor: Colors.grey.shade400,
                           child: Row(

@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:skybeat/utils/size_config.dart';
 
 class PlaylistCreator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Container(
-      height: 200.0,
-      width: MediaQuery.of(context).size.width,
+      height: SizeConfig.blockSizeVertical * 20,
+      width: SizeConfig.screenWidth,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-            bottomRight: Radius.circular(20.0),
-            bottomLeft: Radius.circular(20.0)),
+            bottomRight: Radius.circular(SizeConfig.blockSizeHorizontal * 5),
+            bottomLeft: Radius.circular(SizeConfig.blockSizeHorizontal * 5)),
         color: Color(0xFF1B181F),
       ),
       child: Row(
@@ -21,28 +24,29 @@ class PlaylistCreator extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  height: 20.0,
+                  height: SizeConfig.blockSizeVertical * 2,
                 ),
                 Row(
                   children: <Widget>[
                     SizedBox(
-                      width: 20.0,
+                      width: SizeConfig.blockSizeHorizontal * 3,
                     ),
                     Text(
                       "My Playlists",
-                      style:
-                          TextStyle(fontSize: 20.0, color: Color(0xFFCFCAD1)),
+                      style: TextStyle(
+                          fontSize: SizeConfig.safeBlockHorizontal * 4,
+                          color: Color(0xFFCFCAD1)),
                     ),
                     Spacer(),
                     Container(
-                      height: 30.0,
+                      height: SizeConfig.blockSizeVertical * 3,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           GestureDetector(
                             child: Icon(
                               Icons.add,
-                              size: 30.0,
+                              size: SizeConfig.blockSizeHorizontal * 5.5,
                               color: Color(0xFFCFCAD1),
                             ),
                             onTap: () {
@@ -50,12 +54,12 @@ class PlaylistCreator extends StatelessWidget {
                             },
                           ),
                           SizedBox(
-                            width: 20.0,
+                            width: SizeConfig.blockSizeHorizontal * 2,
                           ),
                           GestureDetector(
                             child: Icon(
                               Icons.reorder,
-                              size: 30.0,
+                              size: SizeConfig.blockSizeHorizontal * 5.5,
                               color: Color(0xFFCFCAD1),
                             ),
                             onTap: () {
@@ -66,43 +70,44 @@ class PlaylistCreator extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 20.0,
+                      width: SizeConfig.blockSizeHorizontal * 4,
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 20.0,
+                  height: SizeConfig.blockSizeVertical * 2,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      width: 20.0,
+                      width: SizeConfig.blockSizeHorizontal * 4,
                     ),
                     Container(
-                      height: 70.0,
-                      width: 70.0,
+                      height: SizeConfig.blockSizeVertical * 7,
+                      width: SizeConfig.blockSizeHorizontal * 14,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5.0),
+                          borderRadius: BorderRadius.circular(
+                              SizeConfig.blockSizeVertical),
                           color: Colors.black),
                       child: Stack(
                         children: <Widget>[
                           Image.network(
                             'https://monodomo.com/free-wallpapers/colorful-music-note-wallpapers-desktop-For-Free-Wallpaper.jpg',
-                            height: 70.0,
-                            width: 70.0,
+                            height: SizeConfig.blockSizeVertical * 7,
+                            width: SizeConfig.blockSizeHorizontal * 14,
                           ),
                           Center(
                             child: Icon(
                               Icons.play_arrow,
-                              size: 40.0,
+                              size: SizeConfig.blockSizeVertical * 4,
                             ),
                           )
                         ],
                       ),
                     ),
                     SizedBox(
-                      width: 15.0,
+                      width: SizeConfig.blockSizeHorizontal * 3,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,10 +116,10 @@ class PlaylistCreator extends StatelessWidget {
                           "Favorite songs",
                           textAlign: TextAlign.right,
                           style: TextStyle(
-                              color: Color(0xFFCFCAD1), fontSize: 18.0),
+                              color: Color(0xFFCFCAD1), fontSize: SizeConfig.safeBlockHorizontal * 3.5),
                         ),
                         SizedBox(
-                          height: 10.0,
+                          height: SizeConfig.blockSizeVertical,
                         ),
                         Text(
                           "0 songs",

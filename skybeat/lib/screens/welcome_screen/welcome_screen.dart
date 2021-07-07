@@ -4,10 +4,13 @@ import 'package:simple_animations/simple_animations.dart';
 import 'package:skybeat/auth/sign_in.dart';
 import 'package:skybeat/screens/bottom_nav_bar.dart';
 import 'package:skybeat/screens/welcome_screen/widgets/animated_text.dart';
+import 'package:skybeat/utils/size_config.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     final tween = MultiTrackTween([
       Track("color1").add(Duration(seconds: 3),
           ColorTween(begin: Color(0xFF2E2870), end: Color(0xFF3072AC))),
@@ -37,14 +40,14 @@ class WelcomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.only(top: 75.0),
+                    padding: EdgeInsets.only(top: SizeConfig.blockSizeVertical * 7),
                     child: Column(
                       children: <Widget>[
                         Text(
                           'TUNE IN         ',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 70.0,
+                            fontSize: SizeConfig.blockSizeVertical * 7,
                           ),
                         ),
                         AnimatedText(text: "TOGETHER",),
@@ -52,14 +55,14 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 70.0,
+                    height: SizeConfig.blockSizeVertical * 7,
                     width: MediaQuery.of(context).size.width,
                   ),
                   Column(
                     children: <Widget>[
                       Container(
-                        height: 45.0,
-                        width: 425.0,
+                        height: SizeConfig.blockSizeVertical * 4.7,
+                        width: SizeConfig.blockSizeHorizontal * 86,
                         child: FlatButton(
                           color: Color(0xFF1553C6),
                           shape: RoundedRectangleBorder(
@@ -88,12 +91,11 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 12.0,
-                        width: 5.0,
+                        height: SizeConfig.blockSizeVertical * 1.2,
                       ),
                       Container(
-                        height: 45.0,
-                        width: 425.0,
+                        height: SizeConfig.blockSizeVertical * 4.7,
+                        width: SizeConfig.blockSizeHorizontal * 86,
                         child: FlatButton(
                           color: Colors.white,
                           shape: RoundedRectangleBorder(
@@ -128,14 +130,14 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 20.0,
+                        height: SizeConfig.blockSizeVertical * 2,
                       ),
                       Text(
                         'By clicking log in, you agree to our Privacy Policy and Terms of Service',
-                        style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                        style: TextStyle(color: Colors.grey, fontSize: SizeConfig.safeBlockHorizontal * 2.5),
                       ),
                       SizedBox(
-                        height: 20.0,
+                        height: SizeConfig.blockSizeVertical * 2,
                       )
                     ],
                   ),

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:skybeat/screens/profile_page/widgets/shimmer.dart';
+import 'package:skybeat/utils/size_config.dart';
 
 class HistoryTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Container(
       height: MediaQuery.of(context).size.height,
       color: Color(0xFF131017),
@@ -15,23 +18,41 @@ class HistoryTab extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 25.0,
+              height: SizeConfig.blockSizeVertical * 2.5,
             ),
             Row(
               children: <Widget>[
                 SizedBox(
-                  width: 20.0,
+                  width: SizeConfig.blockSizeHorizontal * 4,
                 ),
                 GestureDetector(
                   onTap: () {
                     print("PLAY button pressed");
                   },
                   child: Container(
-                    height: 50,
-                    width: 150,
+                    height: SizeConfig.blockSizeVertical * 4.5,
+                    width: SizeConfig.blockSizeHorizontal * 30,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30.0),
-                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(
+                          SizeConfig.blockSizeVertical * 3),
+                      color: Colors.black87,
+                    ),
+                    child: Center(
+                      child: Shimmer(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.play_arrow,
+                              size: SizeConfig.blockSizeVertical * 2,
+                            ),
+                            Text("Click to play")
+                          ],
+                        ),
+                        gradient: LinearGradient(
+                            colors: [Colors.white, Colors.greenAccent]),
+                        period: Duration(seconds: 3),
+                      ),
                     ),
                   ),
                 ),
@@ -46,12 +67,12 @@ class HistoryTab extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 20.0,
+                  width: SizeConfig.blockSizeHorizontal * 4,
                 )
               ],
             ),
             SizedBox(
-              height: 20.0,
+              height: SizeConfig.blockSizeVertical * 2,
             ),
             Expanded(
               child: Container(
@@ -62,18 +83,19 @@ class HistoryTab extends StatelessWidget {
                   itemBuilder: (context, index) => Row(
                     children: <Widget>[
                       SizedBox(
-                        width: 20.0, height: 90.0,
+                        width: SizeConfig.blockSizeHorizontal * 4,
+                        height: SizeConfig.blockSizeVertical * 9,
                       ),
                       Container(
-                        height: 70.0,
-                        width: 70.0,
+                        height: SizeConfig.blockSizeVertical * 7,
+                        width: SizeConfig.blockSizeHorizontal * 14,
                         decoration: BoxDecoration(
                           color: Colors.green,
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
                       SizedBox(
-                        width: 20.0,
+                        width: SizeConfig.blockSizeHorizontal * 4,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,9 +103,12 @@ class HistoryTab extends StatelessWidget {
                           Text(
                             "Song Name",
                             style: TextStyle(
-                                color: Color(0xFFCFCAD1), fontSize: 18.0),
+                                color: Color(0xFFCFCAD1),
+                                fontSize: SizeConfig.safeBlockHorizontal * 3.5),
                           ),
-                          SizedBox(height: 10.0,),
+                          SizedBox(
+                            height: SizeConfig.blockSizeVertical,
+                          ),
                           Text(
                             "Artist Name \u00b7 Album Name",
                             style: TextStyle(
@@ -94,9 +119,15 @@ class HistoryTab extends StatelessWidget {
                       ),
                       Spacer(),
                       GestureDetector(
-                        child: Icon(Icons.more_vert,size: 30.0, color: Color(0xFF6D6977),),
+                        child: Icon(
+                          Icons.more_vert,
+                          size: SizeConfig.blockSizeVertical * 3,
+                          color: Color(0xFF6D6977),
+                        ),
                       ),
-                      SizedBox(width: 20.0,)
+                      SizedBox(
+                        width: SizeConfig.blockSizeHorizontal * 4,
+                      )
                     ],
                   ),
                 ),

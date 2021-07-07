@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:skybeat/screens/profile_page/notification_page.dart';
+import 'package:skybeat/utils/size_config.dart';
 
 import '../settings_page.dart';
 
@@ -13,7 +14,8 @@ class ProfilePagePresenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double statusBarHeight = MediaQuery.of(context).padding.top;
+    SizeConfig().init(context);
+    final double statusBarHeight = SizeConfig.mediaQueryData.padding.top;
 
     final tween = MultiTrackTween([
       Track("color1").add(Duration(seconds: 3),
@@ -29,14 +31,15 @@ class ProfilePagePresenter extends StatelessWidget {
       builder: (context, animation) {
         return Container(
           padding: EdgeInsets.only(top: statusBarHeight),
-          height: 227.0,
+          height: SizeConfig.blockSizeVertical * 22.5,
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 5.0,
+                height: SizeConfig.blockSizeVertical * 0.5,
               ),
               Padding(
-                padding: EdgeInsets.only(top: 8.0),
+                padding:
+                    EdgeInsets.only(top: SizeConfig.blockSizeVertical * 0.8),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
@@ -55,7 +58,7 @@ class ProfilePagePresenter extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 30.0,
+                      width: SizeConfig.blockSizeHorizontal * 3,
                     ),
                     GestureDetector(
                       onTap: () {
@@ -71,9 +74,7 @@ class ProfilePagePresenter extends StatelessWidget {
                         color: Color(0xFFCFCAD1),
                       ),
                     ),
-                    SizedBox(
-                      width: 15.0,
-                    )
+                    SizedBox(width: SizeConfig.blockSizeHorizontal * 3),
                   ],
                 ),
               ),
@@ -85,17 +86,17 @@ class ProfilePagePresenter extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       SizedBox(
-                        width: 20.0,
+                        width: SizeConfig.blockSizeHorizontal * 4
                       ),
                       CircleAvatar(
                         child: Icon(Icons.person),
-                        radius: 30.0,
+                        radius: SizeConfig.blockSizeHorizontal * 7,
                         backgroundColor: Colors.grey.shade800,
                       ),
                     ],
                   ),
                   SizedBox(
-                    height: 25.0,
+                    height: SizeConfig.blockSizeVertical * 2.5,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -109,15 +110,13 @@ class ProfilePagePresenter extends StatelessWidget {
                             fontFamily: "Teko"),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 13.0),
+                        padding: EdgeInsets.only(right: SizeConfig.blockSizeHorizontal * 2.6),
                         child: GestureDetector(
                           child: Icon(
                             Icons.arrow_forward_ios,
                             color: Color(0xFFCFCAD1),
                           ),
-                          onTap: () {
-                            print("Arrow pressed");
-                          },
+                          onTap: () {},
                         ),
                       )
                     ],

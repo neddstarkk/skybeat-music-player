@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skybeat/utils/size_config.dart';
 
 class Artist {
   Artist({this.artistName, this.image, this.noOfSongs});
@@ -53,6 +54,8 @@ class ArtistTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+
     return Container(
       height: MediaQuery.of(context).size.height,
       color: Color(0xFF131019),
@@ -69,20 +72,20 @@ class ArtistTab extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 20.0,
+                    height: SizeConfig.blockSizeVertical * 2,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       SizedBox(
-                        width: 20.0,
+                        width: SizeConfig.safeBlockHorizontal * 4,
                       ),
                       CircleAvatar(
                         backgroundImage: NetworkImage(_artists[index].image),
-                        radius: 35.0,
+                        radius: SizeConfig.blockSizeVertical * 3.45,
                       ),
                       SizedBox(
-                        width: 20.0,
+                        width: SizeConfig.safeBlockHorizontal * 4,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,10 +94,11 @@ class ArtistTab extends StatelessWidget {
                           Text(
                             _artists[index].artistName,
                             style: TextStyle(
-                                color: Color(0xFFCFCAD1), fontSize: 18.0),
+                                color: Color(0xFFCFCAD1),
+                                fontSize: SizeConfig.safeBlockHorizontal * 3.7),
                           ),
                           SizedBox(
-                            height: 5.0,
+                            height: SizeConfig.blockSizeVertical * 0.5,
                           ),
                           Text(
                             "${_artists[index].noOfSongs} songs",
@@ -106,7 +110,9 @@ class ArtistTab extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10.0,)
+                  SizedBox(
+                    height: SizeConfig.blockSizeVertical,
+                  )
                 ],
               ),
             );

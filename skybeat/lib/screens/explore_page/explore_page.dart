@@ -7,12 +7,15 @@ import 'package:skybeat/screens/explore_page/widgets/new_releases.dart';
 import 'package:skybeat/screens/explore_page/widgets/playlists.dart';
 import 'package:skybeat/screens/explore_page/widgets/searchbar.dart';
 import 'package:skybeat/screens/explore_page/widgets/skybeat_charts.dart';
+import 'package:skybeat/utils/size_config.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+  SizeConfig().init(context);
+
     final tween = MultiTrackTween([
       Track("color1").add(Duration(seconds: 3),
           ColorTween(begin: Color(0xFF170C45), end: Color(0xFF580038))),
@@ -46,56 +49,56 @@ class ExplorePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                SizedBox(height: MediaQuery.of(context).padding.top + 30),
+                SizedBox(height: SizeConfig.mediaQueryData.padding.top + 30),
                 SearchBar(),
                 SizedBox(
-                  height: 25.0,
+                  height: SizeConfig.blockSizeVertical * 2.3,
                 ),
                 GenreSelector(),
                 SizedBox(
-                  height: 40.0,
+                  height: SizeConfig.blockSizeVertical * 4,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      width: 20.0,
+                      width: SizeConfig.blockSizeHorizontal * 3,
                     ),
                     Text(
                       "Skybeat Charts",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0,
+                        fontSize: SizeConfig.safeBlockHorizontal * 5.2,
                         color: Color(0xFFCDCED3),
                       ),
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 25.0,
+                  height: SizeConfig.blockSizeVertical * 2.5,
                 ),
                 SkybeatCharts(),
                 SizedBox(
-                  height: 40.0,
+                  height: SizeConfig.blockSizeVertical * 4
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      width: 20.0,
+                      width: SizeConfig.blockSizeHorizontal * 3,
                     ),
                     Text(
                       "Playlists For You",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0,
+                        fontSize: SizeConfig.safeBlockHorizontal * 5.2,
                         color: Color(0xFFCDCED3),
                       ),
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 25.0,
+                  height: SizeConfig.blockSizeVertical * 2.5,
                 ),
                 Playlists(),
                 NewReleases(),

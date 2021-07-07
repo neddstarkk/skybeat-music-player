@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:skybeat/utils/size_config.dart';
 
 class DownloadTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Container(
       color: Color(0xFF131017),
       child: Container(
@@ -13,12 +15,12 @@ class DownloadTab extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            SizedBox(height: 220.0,),
+            SizedBox(height: SizeConfig.blockSizeVertical * 22,),
             Text(
               "You haven\'t downloaded songs yet",
               style: TextStyle(
                 color: Color(0xFF6D6977),
-                fontSize: 16.0,
+                fontSize: SizeConfig.safeBlockHorizontal * 3.5,
               ),
             ),
           ],
